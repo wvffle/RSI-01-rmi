@@ -1,0 +1,12 @@
+tasks:
+  - init: mvn clean install -U -DskipTests
+    command: mvn spring-boot:run
+    name: Run PetClinic app
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
