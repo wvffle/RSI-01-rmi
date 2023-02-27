@@ -19,5 +19,20 @@ public class MyServerImpl extends UnicastRemoteObject implements MyServerInt {
     System.out.println(res);
     return res;
   }
-    
+
+  @Override
+  public int calc(int a, CalculationOperator operator, int b) throws RemoteException {
+    switch (operator) {
+      case ADD:
+        return a + b;
+      case DIV:
+        return a / b;
+      case MULT:
+        return a * b;
+      case SUB:
+        return a - b;
+      default:
+        return 0;
+    }
+  }
 }
