@@ -4,7 +4,6 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class MyServerImpl extends UnicastRemoteObject implements MyServerInt {
 
@@ -17,12 +16,13 @@ public class MyServerImpl extends UnicastRemoteObject implements MyServerInt {
   }
 
   private void reset () {
+    state.clear();
+
     for (int i = 0; i < 9; i++) {
       state.add(BoardState.EMPTY);
     }
 
-    Random r = new Random();
-    turnOf = Math.abs(r.nextInt()) % 2;
+    turnOf = 0;
   }
 
   @Override
