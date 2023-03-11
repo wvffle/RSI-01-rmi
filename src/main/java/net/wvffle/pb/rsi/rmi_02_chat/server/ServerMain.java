@@ -1,4 +1,4 @@
-package net.wvffle.pb.rsi.rmi.server;
+package net.wvffle.pb.rsi.rmi_02_chat.server;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -9,7 +9,7 @@ public class ServerMain {
   public static void main(String[] args) {
     try {
       LocateRegistry.createRegistry(1099);
-      
+
       MyServerImpl server = new MyServerImpl();
       Naming.rebind("//0.0.0.0/ABC", server);
       System.out.println("Serwer oczekuje ...");

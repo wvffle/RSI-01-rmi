@@ -1,9 +1,9 @@
-package net.wvffle.pb.rsi.rmi.client;
+package net.wvffle.pb.rsi.rmi_01.client;
 
 import java.rmi.Naming;
 
-import net.wvffle.pb.rsi.rmi.server.CalculationOperator;
-import net.wvffle.pb.rsi.rmi.server.MyServerInt;
+import net.wvffle.pb.rsi.rmi_01.server.CalculationOperator;
+import net.wvffle.pb.rsi.rmi_01.server.MyServerInt;
 
 public class ClientMain {
     public static void main(String[] args) {

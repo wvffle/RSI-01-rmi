@@ -1,4 +1,4 @@
-package net.wvffle.pb.rsi.rmi.server;
+package net.wvffle.pb.rsi.rmi_01.server;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

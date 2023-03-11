@@ -3,7 +3,7 @@ version: '3'
 services:
   server:
     image: openjdk:11-buster
-    command: java -cp /app/target/classes net.wvffle.pb.rsi.rmi.server.ServerMain
+    command: java -cp /app/target/classes net.wvffle.pb.rsi.rmi_01.server.ServerMain
     volumes:
       - ./target:/app/target
     ports:
@@ -11,7 +11,7 @@ services:
 
   client-1:
     image: openjdk:11-buster
-    command: java -cp /app/target/classes net.wvffle.pb.rsi.rmi.client.ClientMain server
+    command: java -cp /app/target/classes net.wvffle.pb.rsi.rmi_01.client.ClientMain server
     volumes:
       - ./target:/app/target
     depends_on:
@@ -19,7 +19,7 @@ services:
 
   client-2:
     image: openjdk:11-buster
-    command: java -cp /app/target/classes net.wvffle.pb.rsi.rmi.client.ClientMain server
+    command: java -cp /app/target/classes net.wvffle.pb.rsi.rmi_01.client.ClientMain server
     volumes:
       - ./target:/app/target
     depends_on:
@@ -27,7 +27,7 @@ services:
 
   client-3:
     image: openjdk:11-buster
-    command: java -cp /app/target/classes net.wvffle.pb.rsi.rmi.client.ClientMain server
+    command: java -cp /app/target/classes net.wvffle.pb.rsi.rmi_01.client.ClientMain server
     volumes:
       - ./target:/app/target
     depends_on:
